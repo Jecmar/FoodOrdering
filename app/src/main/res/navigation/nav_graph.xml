@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.foodordering.views.pages.home.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_selectRestaurant"
+            app:destination="@id/selectRestaurant" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.example.foodordering.views.pages.Favorite"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/cartShop"
+        android:name="com.example.foodordering.views.pages.CartShop"
+        android:label="fragment_cart_shop"
+        tools:layout="@layout/fragment_cart_shop" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.foodordering.views.pages.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/selectRestaurant"
+        android:name="com.example.foodordering.views.pages.home.SelectRestaurant"
+        android:label="fragment_select_restaurant"
+        tools:layout="@layout/fragment_select_restaurant" >
+        <action
+            android:id="@+id/action_selectRestaurant_to_selectFood"
+            app:destination="@id/selectFood" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectFood"
+        android:name="com.example.foodordering.views.pages.home.SelectFood"
+        android:label="fragment_select_food"
+        tools:layout="@layout/fragment_select_food" />
+</navigation>
