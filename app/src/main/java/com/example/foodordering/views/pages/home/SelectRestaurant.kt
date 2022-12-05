@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.foodordeeing.R
+import com.example.foodordeeing.databinding.FragmentSelectRestaurantBinding
+
 class SelectRestaurant : Fragment() {
+    private var _binding: FragmentSelectRestaurantBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +21,12 @@ class SelectRestaurant : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_select_restaurant, container, false)
+        _binding = FragmentSelectRestaurantBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

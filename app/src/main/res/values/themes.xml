@@ -21,4 +21,10 @@
         <item name="closeIcon">@drawable/ic_close</item>
         <item name="searchHintIcon">@drawable/ic_search</item>
     </style>
+    <style name="Theme.FoodOrdeeing.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.FoodOrdeeing.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.FoodOrdeeing.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -13,7 +13,7 @@ class SplashScreen : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val intent = Intent(this, BottomNavigation::class.java)
+        val intent = Intent(this, AppScreen::class.java)
         startActivity(intent)
     }
 }

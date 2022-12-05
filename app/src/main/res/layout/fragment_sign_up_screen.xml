@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.foodordering.views.SignUpScreen">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:navigationIcon="@drawable/ic_back"/>
+
+    <TextView
+        android:id="@+id/txtSignUp"
+        android:text="Sign Up"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:text="Username"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+        app:layout_constraintStart_toStartOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername"
+        android:layout_marginHorizontal="30dp"/>
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:text="Email"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintStart_toStartOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        android:layout_marginHorizontal="30dp"/>
+
+    <TextView
+        android:id="@+id/txtPassword"
+        android:text="Password"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/password" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+        android:layout_marginHorizontal="30dp"/>
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="Sign Up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        android:gravity="center_horizontal">
+        <TextView
+            android:text="Already have an account?"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
